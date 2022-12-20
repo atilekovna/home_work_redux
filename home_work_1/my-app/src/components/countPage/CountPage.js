@@ -1,27 +1,23 @@
-import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 function CountPage() {
 
-  let [count, setCount] = useState(0)
 
   const dispatch = useDispatch()
+  const count = useSelector(state => state.count)
 
   const increment = () => {
-    setCount(++count);
     dispatch({
       type: "INCREMENT",
-      payload: count
+      count: count
     })
   }
 
   const decrement = () => {
-    if (count > 0){
-      setCount(--count);
-    }
     dispatch({
       type: "DECREMENT",
-      payload: count
+      count: count
     })
   }
 
