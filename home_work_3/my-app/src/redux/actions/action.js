@@ -15,4 +15,9 @@ export  const counterActions = (value) => {
    }
 }
 
+export const deleteAllActions = () => {
+   return {
+      type: types.DELETE
+   }
+}
 
