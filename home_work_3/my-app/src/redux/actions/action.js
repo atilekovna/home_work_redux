@@ -8,14 +8,14 @@ export  const setValue = (value) => {
    }
 }
 
-export  const counterActions = (value) => {
+export  const addNumberActions = (value) => {
    return {
-      type: types.COUNTER,
+      type: types.NUMBER,
       payload: value
    }
 }
 
-export const deleteAllActions = () => {
+export const deleteAllNumbersActions = () => {
    return {
       type: types.DELETE
    }

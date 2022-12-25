@@ -15,7 +15,7 @@ export default function countReducer(state = initialState, action) {
         value: action.payload
       }
 
-    case types.COUNTER:
+    case types.NUMBER:
       return {
         ...state,
         numbers: [...state.numbers, state.lastValue + action.payload],

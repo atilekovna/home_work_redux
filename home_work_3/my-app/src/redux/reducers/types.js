@@ -1,5 +1,5 @@
 export  const types = {
     VALUE: "VALUE",
-    COUNTER: "COUNTER",
+    NUMBER: "NUMBER",
     DELETE: "DELETE"
 }

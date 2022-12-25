@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { counterActions, deleteAllActions, setValue } from "../redux/actions/action";
+import { addNumberActions, deleteAllNumbersActions, setValue } from "../redux/actions/action";
 
 function CountPage() {
 
@@ -11,12 +11,12 @@ function CountPage() {
     dispatch(setValue(+event.target.value))
   }
 
-  const counterNum = () => {
-    dispatch(counterActions(value))
+  const addNumber = () => {
+    dispatch(addNumberActions(value))
   }
 
-  const deleteAll = () => {
-    dispatch(deleteAllActions())
+  const deleteAllNumbers = () => {
+    dispatch(deleteAllNumbersActions())
   }
 
 
@@ -25,8 +25,8 @@ function CountPage() {
     <div>
       <h1>Counter</h1>
       <input type="number" placeholder="number" onChange={changeInput} value={value}/>
-      <button disabled={!value} onClick={counterNum}>add</button>
-      <button disabled={!numbers.length} onClick={deleteAll}>delete</button>
+      <button disabled={!value} onClick={addNumber}>Add</button>
+      <button disabled={!numbers.length} onClick={deleteAllNumbers}>Delete all</button>
 
       {numbers.map((number, index) => <p key = {index}>{number}</p>)}
     </div>
