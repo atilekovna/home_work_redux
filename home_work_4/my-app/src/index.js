@@ -10,8 +10,6 @@ import { logger } from "redux-logger/src";
 import thunk from "redux-thunk";
 
 
-
-
 const store = createStore(rootReducer, applyMiddleware(logger, thunk))
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -20,5 +18,3 @@ root.render(
     <App />
   </Provider>
 );
-
-
